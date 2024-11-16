@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(cors({
   origin: (origin, callback) => {
-      const allowedOrigins = ['http://localhost:5173', 'https://books-store-mern-77rc-5t0sgpgo9-arleys-projects-f4d0dc50.vercel.app'];
+      const allowedOrigins = ['http://localhost:5173', 'https://books-store-007.vercel.app/'];
       if (!origin || allowedOrigins.includes(origin)) {
           callback(null, true);
       } else {
@@ -43,5 +43,5 @@ async function main() {
 main().then(() => console.log("Mongodb connect successfully!")).catch(err => console.log(err));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });
